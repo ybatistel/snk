@@ -3,12 +3,13 @@ name: Generate Snake Animation
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # todos os dias à meia-noite
+
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: github-pages
 
     steps:
