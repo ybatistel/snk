@@ -3,13 +3,13 @@ name: Generate Snake Animation
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *" # todos os dias à meia-noite
+    - cron: "0 0 * * *"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages  # <- ESSENCIAL! Isso resolve seu erro!
+    environment: 
+      name: github-pages
 
     steps:
       - name: Checkout repository
@@ -17,7 +17,7 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Generate snake animation
+      - name: Generate Snake Animation
         uses: Platane/snk@v3
         with:
           github_user_name: ybatistel
