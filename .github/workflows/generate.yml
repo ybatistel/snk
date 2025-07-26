@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "0 0 * * *"  # todos os dias à meia-noite
 
+permissions:
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
